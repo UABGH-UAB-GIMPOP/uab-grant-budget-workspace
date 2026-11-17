@@ -1,0 +1,55 @@
+// Pure, opt-in canonical CSV contract. No persistence, network, or UI side effects.
+import {csvRecords} from './csv.js';
+const copy = value => JSON.parse(JSON.stringify(value));
+const fields = ['month','cat','amount','reference','note','personId','commitmentId','commitmentAmount'];
+const same = (a,b) => fields.every(k => String(a[k] ?? '') === String(b[k] ?? ''));
+const digest = async text => Array.from(new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),b=>b.toString(16).padStart(2,'0')).join('');
+function scope(value) {
+ const {projectId,sourceSystem,batchId} = value || {};
+ for(const [key,v] of Object.entries({projectId,sourceSystem,batchId})) if(typeof v!=='string'||!v.trim()||v!==v.trim()||v.length>200) throw Error(`Explicit ${key} is required (1–200 characters).`);
+ return {projectId,sourceSystem,batchId,mappingVersion:'canonical-csv-v1'};
+}
+export async function prepareImport(project,text,options) {
+ const metadata=scope(options);
+ if(typeof text!=='string'||new TextEncoder().encode(text).length>2000000) throw Error('CSV must be text no larger than 2 MB.');
+ if(!Array.isArray(project.ledger)) throw Error('Project ledger required.');
+ if(project.id!=null&&project.id!==metadata.projectId) throw Error('Project identity mismatch.');
+ const parsed=csvRecords(text);
+ if(parsed.length>10000) throw Error('CSV exceeds 10,000 rows.');
+ const fileHash=await digest(text),baseHash=await digest(JSON.stringify(project));
+ const batches=project.importBatches||[];
+ if(batches.some(b=>b.batchId===metadata.batchId)) throw Error('Batch ID already exists; use a new review batch.');
+ const warnings=batches.some(b=>b.fileHash===fileHash)?['This exact file was imported before; review every row.']:[];
+ const existing=new Map(),legacy=new Map();
+ for(const entry of project.ledger) {
+  if(!entry.reference) continue;
+  const provenance=entry.importSource;
+  const target=provenance?.projectId===metadata.projectId&&provenance?.sourceSystem===metadata.sourceSystem?existing:!provenance?legacy:null;
+  if(target) target.set(entry.reference,[...(target.get(entry.reference)||[]),entry]);
+ }
+ const rows=parsed.map((raw,index)=>{
+  const row={month:raw.month,cat:raw.category,amount:Number(raw.amount),reference:raw.reference,note:raw.note||'',personId:raw.personId||undefined,commitmentId:raw.commitmentId||undefined,...(raw.commitmentAmount?.trim()?{commitmentAmount:Number(raw.commitmentAmount)}:{})};
+  const matches=existing.get(row.reference)||[],unscoped=legacy.get(row.reference)||[];
+  let status='add',reason='New source transaction';
+  if(unscoped.length){status='conflict';reason='Existing reference has no source identity; resolve provenance first';}
+  else if(matches.length>1){status='conflict';reason='Multiple existing records share this source reference';}
+  else if(matches.length){status=same(matches[0],row)?'skip':'conflict';reason=status==='skip'?'Identical source transaction':'Source reference has different values';}
+  if(!matches.length) existing.set(row.reference,[row]);
+  return {rowNumber:index+2,status,reason,record:row,sourceRecord:raw};
+ });
+ return {metadata,fileHash,baseHash,warnings,rows,canApply:!rows.some(r=>r.status==='conflict'),counts:{add:rows.filter(r=>r.status==='add').length,skip:rows.filter(r=>r.status==='skip').length,conflict:rows.filter(r=>r.status==='conflict').length}};
+}
+export async function applyReviewedImport(project,text,options,review,validateProject) {
+ // Recompute from original text, not caller-editable preview rows. Fail closed on stale edits.
+ const current=await prepareImport(project,text,options);
+ if(!review||JSON.stringify(current)!==JSON.stringify(review)) throw Error('Preview changed; review the import again.');
+ if(!current.canApply) throw Error('Resolve all conflicts before applying; nothing was changed.');
+ if(typeof validateProject!=='function') throw Error('Project validator required.');
+ const next=copy(project);let id=next.ledger.reduce((n,e)=>Math.max(n,Number(e.id)||0),0);
+ if(!Number.isSafeInteger(id)||id>Number.MAX_SAFE_INTEGER-current.counts.add) throw Error('Ledger IDs exceed safe range.');
+ for(const row of current.rows.filter(r=>r.status==='add')) next.ledger.push({...row.record,id:++id,importSource:{...current.metadata,fileHash:current.fileHash,rowNumber:row.rowNumber,sourceRecord:copy(row.sourceRecord)}});
+ next.importBatches=[...(next.importBatches||[]),{...current.metadata,fileHash:current.fileHash,counts:current.counts,originalCsv:text}];
+ if(current.counts.add) next.grant.reconciled=false;
+ const errors=validateProject(next).filter(x=>x.level==='error');if(errors.length) throw Error(errors.map(x=>x.message).join(' '));
+ return next;
+}

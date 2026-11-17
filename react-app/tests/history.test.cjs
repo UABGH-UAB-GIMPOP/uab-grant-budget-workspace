@@ -1,0 +1,7 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');
+test('change history captures edits and deletions by stable identity without recursive audit copies',async()=>{
+ const {describeChanges}=await import('../src/lib/history.js');const before={ledger:[{id:1,amount:10},{id:2,amount:20}],audit:[{action:'old'}]},after={ledger:[{id:2,amount:25}],audit:[{action:'new'}]};const changes=describeChanges(before,after);assert.equal(changes.length,2);assert.deepEqual(changes[0],{field:'ledger',id:'1',before:{id:1,amount:10},after:null});assert.equal(changes[1].after.amount,25);after.ledger[0].amount=99;assert.equal(changes[1].after.amount,25);
+});
+test('archive replacement preserves both histories and records scenario and baseline changes',async()=>{
+ const {recordReplacement}=await import('../src/lib/history.js');const entry={at:'2026-11-17T00:00:00Z',action:'Old edit',changes:[]};const current={project:{amount:1,audit:[entry]},baseline:{amount:1},scenario:'A'},incoming={project:{amount:2,audit:[entry,{...entry,action:'Imported edit'}]},baseline:{amount:3},scenario:'B'};const result=recordReplacement(current,incoming,'Import','2026-11-17T01:00:00Z');assert.equal(result.project.audit.length,3);assert.equal(result.project.audit[2].action,'Import');assert.ok(result.project.audit[2].changes.some(c=>c.field==='baseline.amount'&&c.before===1&&c.after===3));assert.ok(result.project.audit[2].changes.some(c=>c.field==='scenario'));assert.equal(current.project.audit.length,1);assert.equal(incoming.project.audit.length,2);
+});

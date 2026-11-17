@@ -1,0 +1,10 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const E=require('../engine.cjs');
+test('personnel monthly costs use posted history and modeled future, including credits',async()=>{
+ const {personnelSummary}=await import('../src/lib/personnel.js');const s=E.demo(),p=s.people[0];s.grant.asOf='2026-01';s.ledger=[{personId:p.id,cat:'Personnel',month:'2026-01',amount:100},{personId:p.id,cat:'Personnel',month:'2026-01',amount:-10},{personId:p.id,cat:'Personnel',month:'2026-02',amount:999999}];const r=personnelSummary(s,p,['2026-01','2026-02']);assert.equal(r.actual,90);assert.equal(r.monthly[0].forecast,90);assert.equal(r.forecast,90+E.person(s,p,'2026-02').cost);
+});
+test('proposal ignores posted amounts and effort respects explicit zero',async()=>{
+ const {personnelSummary}=await import('../src/lib/personnel.js');const s=E.demo(),p=s.people[0];s.grant.mode='proposal';p.eff={'2026-01':0};const r=personnelSummary(s,p,['2026-01','2026-02']);assert.equal(r.actual,0);assert.equal(r.monthly[0].forecast,0);assert.equal(r.averageEffort,p.effort/2);assert.equal(r.personMonths,p.effort/100);
+});
+test('unassigned payroll is explicit and reconciles with personnel actuals',async()=>{
+ const {unassignedPayroll,personnelSummary}=await import('../src/lib/personnel.js');const s=E.demo();s.ledger.push({cat:'Personnel',month:'2026-01',amount:123.45});const months=E.months(s.grant.start,s.grant.end);const other=unassignedPayroll(s,months);assert.equal(other.total,123.45);const assigned=s.people.reduce((t,p)=>t+E.cents(personnelSummary(s,p,months).actual),0);assert.equal(E.usd(assigned+E.cents(other.total)),E.calculate(s).cats.find(r=>r.c==='Personnel').actual);s.grant.mode='proposal';assert.equal(unassignedPayroll(s,months).total,0);
+});
