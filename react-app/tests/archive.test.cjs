@@ -62,3 +62,13 @@ test('packed reference boundary round-trips and oversized saves preserve previou
  persistArchive(storage,'key',{project:p,baseline:p,scenario:'Boundary'},E.validate,null);const previous=raw;const loaded=loadArchive(storage,'key',fixture,E.validate);assert.equal(loaded.recovery,undefined);assert.equal(Object.keys(loaded.project.retainedMetadata).length,5000);
  p.retainedMetadata.excess=Array(100).fill(1);assert.throws(()=>persistArchive(storage,'key',{project:p,baseline:p,scenario:'Too many'},E.validate,previous),/reference limits/);assert.equal(raw,previous);assert.equal(writes,1);
 });
+test('incomplete personnel rejects project baseline and saved scenario before persistence',async()=>{
+ const {validateProject}=await import('../src/lib/validate-project.js'),{replaceArchive}=await import('../src/lib/archive.js'),current=(await import('../src/lib/engine.js')).default;
+ for(const field of ['salary','effort','fringe'])for(const value of [undefined,null,'',false,'120000'])for(const target of ['project','baseline','scenario']){
+  const project=current.demo(),baseline=current.demo();let bad=target==='baseline'?baseline:project;
+  if(target==='scenario'){const nested=current.demo();project.savedScenarios=[{id:'s',name:'Synthetic',at:'2026-11-17T00:00:00Z',project:nested,baseline:current.demo()}];bad=nested;}
+  if(value===undefined)delete bad.people[0][field];else bad.people[0][field]=value;
+  let writes=0;assert.throws(()=>replaceArchive({setItem:()=>writes++},'key',{project,baseline,scenario:'Working'},validateProject),field+' '+target);assert.equal(writes,0);
+ }
+ const zero=current.demo();for(const field of ['salary','effort','fringe'])zero.people[0][field]=0;assert.equal(validateProject(zero).some(x=>x.level==='error'),false);assert.doesNotThrow(()=>current.calculate(zero));
+});

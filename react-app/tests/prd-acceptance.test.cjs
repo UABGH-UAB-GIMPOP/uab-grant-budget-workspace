@@ -7,3 +7,18 @@ test('PRD T05 salary cap preserves IBS and annual differential',async()=>{const 
 test('PRD T06 six-month period allocation retains the entire 60000',async()=>{const {E,p}=await fixture(),{allocationPeriods}=await import('../src/lib/budget-periods.js');p.grant.end='2026-06';const allocations=Object.fromEntries([...E.CATS,E.SUB].map(c=>[c,0]));allocations.Other=60000;p.budgetPeriods=[{id:'six-months',start:'2026-01',end:'2026-06',allocations}];assert.equal(E.calculate(p).cats.find(c=>c.c==='Other').plan,60000);assert.equal(allocationPeriods(p)[0].allocations.Other,60000);});
 test('PRD T15 supply quantity and price compound and reset without mutation',async()=>{const {E,p}=await fixture();p.supplies=[{id:'s',month:'2027-01',qty:100,unit:10}];p.scenario={qty:10,cost:20};const original=JSON.stringify(p.supplies);assert.equal(E.calculate(p).proj.Supplies['2027-01'],1320);p.scenario={qty:0,cost:0};assert.equal(E.calculate(p).proj.Supplies['2027-01'],1000);assert.equal(JSON.stringify(p.supplies),original);});
 test('PRD T12 posted F&A replaces estimate while retaining an explicit comparison',async()=>{const {E,p}=await fixture();p.grant.asOf='2026-01';p.people=[];p.subawards=[];p.subPays=[];p.ledger=[{id:'fa-cost',month:'2026-01',cat:'Other',amount:1000,reference:'SYN-FA'}];p.grant.indirect=49;p.postedFa={'2026-01':400};const c=E.calculate(p);assert.equal(c.faEstimatedActual['2026-01'],490);assert.equal(c.fa.actual['2026-01'],400);assert.equal(c.total.actual,1400);assert.equal(c.curve.actual[0],1400);assert.equal(E.usd(E.cents(p.postedFa['2026-01'])-E.cents(c.faEstimatedActual['2026-01'])),-90);p.postedFa['2026-01']=0;assert.equal(E.calculate(p).total.actual,1000);delete p.postedFa['2026-01'];assert.equal(E.calculate(p).total.actual,1490);});
+test('PRD T07 future and out-of-period transactions cannot change historical average',async()=>{
+ const {E,p}=await fixture();p.grant.asOf='2026-02';p.people=[];p.subawards=[];p.subPays=[];p.supplies=[];p.costs=[];p.assume={Travel:null,Other:0};
+ p.ledger=[{id:'known',month:'2026-01',cat:'Travel',amount:600}];
+ const before=E.calculate(p);assert.equal(before.act.Travel['2026-01'],600);assert.equal(before.proj.Travel['2026-03'],300);
+ p.ledger.push({id:'future',month:'2026-03',cat:'Travel',amount:1000},{id:'before-award',month:'2025-12',cat:'Travel',amount:9000});
+ const after=E.calculate(p);assert.deepEqual(after.act.Travel,before.act.Travel);assert.deepEqual(after.proj.Travel,before.proj.Travel);assert.equal(after.total.actual,before.total.actual);
+ p.assume.Travel=0;assert.equal(E.calculate(p).proj.Travel['2026-03'],0);
+});
+test('PRD T09 subaward eligible base is consumed once across budget years',async()=>{
+ const {E,p}=await fixture();p.grant.asOf='2027-02';p.people=[];p.ledger=[];p.supplies=[];p.costs=[];p.assume={Travel:0,Other:0};
+ p.subawards=[{id:'award-a',name:'Synthetic award A',start:'2026-01',end:'2028-12',total:100000,subj:50000}];
+ p.subPays=[{id:'pay-a',sub:'award-a',month:'2026-12',amount:20000},{id:'pay-b',sub:'award-a',month:'2027-01',amount:40000},{id:'pay-c',sub:'award-a',month:'2027-02',amount:10000}];
+ const c=E.calculate(p);assert.equal(c.base.actual['2026-12'],20000);assert.equal(c.base.actual['2027-01'],30000);assert.equal(c.base.actual['2027-02'],0);assert.equal(Object.values(c.base.actual).reduce((a,b)=>a+b,0),50000);
+ assert.equal(c.act[E.SUB]['2027-01'],40000);assert.equal(c.cats.find(row=>row.c==='Direct Consortium/Contractual').proj,100000);
+});

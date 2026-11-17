@@ -1,0 +1,2 @@
+const {test}=require('node:test'),assert=require('node:assert/strict');
+test('coverage ranges preserve gaps and cross-year periods without repetitive month lists',async()=>{const {monthRanges}=await import('../src/lib/month-ranges.js');assert.deepEqual(monthRanges([]),[]);assert.deepEqual(monthRanges(['2025-02','2024-12','2025-01','2025-04','2025-01']),[{start:'2024-12',end:'2025-02'},{start:'2025-04',end:'2025-04'}]);assert.throws(()=>monthRanges(['2025-13']),/Invalid/);});

@@ -34,3 +34,10 @@ export function reconciliationCoverage(project){
  });
  return {months,rows,matched:months.length>0&&rows.every(r=>r.status==='Matched')};
 }
+
+export function reconciliationStatus(project){
+ if(validateStatements(project).length)return {matched:false,label:'Invalid statement data'};
+ if(project.grant.mode==='proposal')return {matched:false,label:'Proposal · no actuals to reconcile'};
+ const coverage=reconciliationCoverage(project);
+ return {matched:coverage.matched,label:!coverage.months.length?'No actual period':coverage.matched?'Statements matched':'Actuals not reconciled'};
+}

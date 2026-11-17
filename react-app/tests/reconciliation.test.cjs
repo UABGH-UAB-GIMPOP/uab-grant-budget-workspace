@@ -27,3 +27,16 @@ test('project import rejects coercible blank and boolean posted F&A while retain
  for(const value of ['', ' ',false,null,'0']){const p=E.demo();p.postedFa={'2026-01':value};assert.ok(validateProject(p).some(x=>x.level==='error'),JSON.stringify(value));assert.throws(()=>normalizeArchive({project:p,baseline:E.demo()},validateProject),/Posted F&A must be a finite number/);assert.equal(statementResult(p,{category:'F&A',start:'2026-01',end:'2026-01',total:0,complete:true}).status,'Missing posted F&A');}
  for(const postedFa of [{},{'2026-01':0}]){const p=E.demo();p.postedFa=postedFa;assert.equal(validateProject(p).filter(x=>x.level==='error').length,0);}
 });
+test('headline status ignores legacy flags and requires complete matching evidence',async()=>{
+ const E=(await import('../src/lib/engine.js')).default,{reconciliationStatus,FA_CATEGORY}=await import('../src/lib/reconciliation.js');const p=E.demo();p.grant.asOf=p.grant.start;p.grant.reconciled=true;p.ledger=[];p.subPays=[];p.statements=[];
+ assert.equal(reconciliationStatus(p).label,'Actuals not reconciled');assert.ok(E.calculate(p).issues.some(x=>x.message.includes('not reconciled')));
+ p.statements=[...E.CATS,E.SUB,FA_CATEGORY].map((category,i)=>({id:'s'+i,source:'Synthetic statement',category,start:p.grant.start,end:p.grant.start,total:0,complete:true}));
+ assert.equal(reconciliationStatus(p).matched,false);p.postedFa={[p.grant.start]:0};assert.equal(reconciliationStatus(p).label,'Statements matched');
+ p.ledger.push({id:'changed',month:p.grant.start,cat:'Other',amount:1});assert.equal(reconciliationStatus(p).matched,false);p.ledger=[];
+ p.statements.push({...p.statements[0],id:'overlap'});assert.equal(reconciliationStatus(p).matched,false);
+ p.grant.mode='proposal';assert.equal(reconciliationStatus(p).label,'Proposal · no actuals to reconcile');assert.equal(E.calculate(p).issues.some(x=>x.message.includes('not reconciled')),false);
+});
+test('malformed statement imports return validation errors without throwing',async()=>{
+ const E=(await import('../src/lib/engine.js')).default,{validateProject}=await import('../src/lib/validate-project.js');
+ for(const statements of [{},[null],[{id:'bad',source:'Synthetic',category:'F&A',start:'2026-01',end:'2026-99',total:0,complete:true}]]){const p=E.demo();p.statements=statements;let errors;assert.doesNotThrow(()=>{errors=validateProject(p)});assert.ok(errors.some(x=>x.level==='error'));}
+});

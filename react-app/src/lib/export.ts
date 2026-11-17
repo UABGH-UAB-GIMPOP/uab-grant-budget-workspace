@@ -1,14 +1,14 @@
 import {unplacedObligations} from './unplaced-obligations';
 import {allocationPeriods} from './budget-periods';
 import {unassignedPayroll} from './personnel';
-import {statementResult} from './reconciliation';
+import {statementResult,reconciliationStatus} from './reconciliation';
 import {subawardEligibility} from './import-validation';
 import Engine from './engine';import {makeXlsx} from './xlsx';
 const CATS=Engine.CATS,SUBCAT=Engine.SUB,mi=Engine.mi;const samePerson=(e,p)=>e.cat==='Personnel'&&String(e.personId)===String(p.id);
 function downloadBlob(b,name){const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 export function workbookSheets(S,activeScenario) {
   const c = Engine.calculate(S), r = v => Math.round(v * 100) / 100;
-  const sum = [["Grant", S.grant.title], ["Period", `${S.grant.start} to ${S.grant.end}`], ["Known through", S.grant.asOf], ["Forecast status",c.forecastIncomplete?"INCOMPLETE: unpaid obligations beyond project end are excluded":"Scheduled obligations included"], [], ["Category", "Planned", "Actual to date", "Projected total", "Variance (planned - projected)"], ...[...c.cats, c.total].map(x => [x.c, r(x.plan), r(x.actual), r(x.proj), r(x.variance)])];
+  const sum = [["Grant", S.grant.title], ["Period", `${S.grant.start} to ${S.grant.end}`], ["Known through", S.grant.asOf], ["Statement status",reconciliationStatus(S).label], ["Forecast status",c.forecastIncomplete?"INCOMPLETE: unpaid obligations beyond project end are excluded":"Scheduled obligations included"], [], ["Category", "Planned", "Actual to date", "Projected total", "Variance (planned - projected)"], ...[...c.cats, c.total].map(x => [x.c, r(x.plan), r(x.actual), r(x.proj), r(x.variance)])];
   const led = [["Category", "Type", ...c.months, "Total"]];
   [...CATS,SUBCAT].forEach(k => [["Planned", c.plan[k]], ["Actual", c.act[k]], ["Projected", c.proj[k]]].forEach(([n, o]) => led.push([k, n, ...c.months.map(m => r(o[m] || 0)), r(c.months.reduce((t, m) => t + (o[m] || 0), 0))])));
   for(const [label,key] of [['Planned','plan'],['Actual','actual'],['Projected','proj']])led.push(['F&A',label,...c.months.map(m=>c.fa[key][m]),Engine.usd(c.months.reduce((t,m)=>t+Engine.cents(c.fa[key][m]),0))]);
@@ -25,6 +25,7 @@ export function workbookSheets(S,activeScenario) {
   sheets.push({name:'Milestones',rows:[['Milestone','Owner','Due','Complete','Repeat','Evidence link','Completed at','Series ID','Previous occurrence','Milestone ID'],...(S.milestones||[]).map(m=>[m.title,m.owner,m.due,m.done?'Yes':'No',m.cadence??'Once',m.evidence??'',m.completedAt??'',m.seriesId??'',m.previousId??'',m.id])]});
   sheets.push({name:'Reconciliation',rows:[['Source','Category','From','Through','Statement total','Recorded total','Difference','Status'],...(S.statements||[]).map(x=>{const r=statementResult(S,x);return [x.source,x.category,x.start,x.end,x.total,r.actual??'',r.difference??'',r.status]})]});
   sheets.push({name:'Commitments',rows:[['ID','Description','Category','Source','Authorized','Cancelled','Paid','Open','Overpaid','Expected month','Forecast month','Replaces'],...c.commitments.rows.map(x=>[x.id,x.name,x.category,x.source,x.amount,x.cancelled,x.paid,x.open,x.overpaid,x.month,x.forecastMonth||'',x.link?x.link.type+':'+x.link.id:''])]});
+  if(c.commitments.rows.some(x=>x.schedule))sheets.push({name:'Payment schedules',rows:[['Commitment ID','Description','Payment ID','Scheduled month','Authorized installment','Remaining forecast month','Remaining amount'],...c.commitments.rows.flatMap(x=>(x.schedule??[]).map(payment=>{const outstanding=x.payments.find(p=>p.id===payment.id);return [x.id,x.name,payment.id,payment.month,payment.amount,outstanding?.month??'',outstanding?.amount??0]}))]});
   sheets.push({name:'Rate changes',rows:[['Rate','Person ID','Effective month','Value','Source'],...(S.rateChanges||[]).map(r=>[r.kind,r.personId||'',r.month,r.value,r.source])]});
   if(S.importBatches?.length)sheets.push({name:'Import batches',rows:[['Project ID','Source','Batch','File SHA-256','Mapping','Added','Skipped'],...S.importBatches.map(b=>[b.projectId,b.sourceSystem,b.batchId,b.fileHash,b.mappingVersion,b.counts.add,b.counts.skip])]});
   sheets.push({name:'Budget periods',rows:[['Period ID','Start','End','Category','Allocation','Basis'],...allocationPeriods(S).flatMap(p=>Object.entries(p.allocations).map(([category,value])=>[p.id,p.start,p.end,category,Number(value),S.budgetPeriods?'Explicit periods':'Grant years']))]});
