@@ -1,0 +1,12 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),esbuild=require('esbuild'),vm=require('node:vm');
+test('supply planning metadata is optional, validated, exported and calculation-neutral',async()=>{
+ const E=(await import('../src/lib/engine.js')).default,{normalizeArchive}=await import('../src/lib/archive.js'),{supplyClassificationLabel,supplyEligibilityReviewLabel}=await import('../src/lib/supply-planning.js');
+ const p=E.demo(),before=E.calculate(p),legacy=structuredClone(p),archive=normalizeArchive({project:legacy,baseline:structuredClone(legacy)},E.validate);
+ assert.equal(archive.project.supplies[0].classification,undefined);assert.equal(supplyClassificationLabel(undefined),'Unknown');assert.equal(supplyEligibilityReviewLabel(undefined),'Not reviewed');
+ p.supplies[0].classification='equipment';p.supplies[0].eligibilityReview='needs-review';p.supplies[0].eligibilitySource='Synthetic award terms, section 4';p.supplies[0].eligibilityNote='Confirm with sponsor contact';
+ assert.deepEqual(E.calculate(p),before);const normalized=normalizeArchive({project:p,baseline:structuredClone(p)},E.validate);assert.deepEqual(normalized.project.supplies[0],p.supplies[0]);
+ const build=await esbuild.build({entryPoints:['src/lib/export.ts'],bundle:true,write:false,platform:'node',format:'cjs'}),mod={exports:{}};vm.runInNewContext(build.outputFiles[0].text,{module:mod,exports:mod.exports,require,TextEncoder,Blob});
+ const rows=mod.exports.workbookSheets(p,'Working').find(s=>s.name==='Supplies').rows,head=rows[0],row=rows[1];for(const [field,value] of Object.entries({'Classification':'Equipment','Eligibility review':'Needs review','Eligibility source':'Synthetic award terms, section 4','Eligibility review notes':'Confirm with sponsor contact'}))assert.equal(row[head.indexOf(field)],value);assert.equal(row[head.indexOf('Base total')],Math.round(p.supplies[0].qty*p.supplies[0].unit*100)/100);
+ for(const [field,value] of [['classification','inferred-allowed'],['eligibilityReview',false],['eligibilitySource',{}],['eligibilityNote','x'.repeat(2001)]]){const bad=structuredClone(p);bad.supplies[0][field]=value;assert.ok(E.validate(bad).some(x=>x.level==='error'));assert.throws(()=>normalizeArchive({project:bad,baseline:bad},E.validate));}
+ const valid=structuredClone(p);valid.supplies[0].eligibilityNote='x'.repeat(2000);assert.equal(E.validate(valid).filter(x=>x.level==='error').length,0);
+});

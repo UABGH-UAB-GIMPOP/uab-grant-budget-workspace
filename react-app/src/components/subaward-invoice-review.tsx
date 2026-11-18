@@ -1,0 +1,21 @@
+import React,{useMemo,useState,useRef,useEffect} from 'react';
+import {repeatedSubawardInvoices} from '../lib/payments';
+import {formatDateUS} from '../lib/date-format';
+import {currentInvoiceReview,invoiceReviewLabels,invoiceSnapshot} from '../lib/invoice-dispositions';
+import {Button} from './ui/button';
+import {Input} from './ui/input';
+import {OptionalFormSelect} from './optional-form-select';
+const money=value=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(value);
+export function SubawardInvoiceReview({project,editing=false,onReview=undefined}){
+ const groups=useMemo(()=>repeatedSubawardInvoices(project),[project]);
+ if(!groups.length)return null;
+ return <section className="invoice-review" aria-label="Repeated invoice references"><h2>Repeated invoice references</h2><p>{groups.length} {groups.length===1?'reference appears':'references appear'} more than once within the same subaward. These may be installments or credits, not duplicate charges. All payments remain included in actuals.</p><p className="muted">Comparison ignores capitalization and extra spaces. Check the original invoices before making any correction.</p>{groups.map(group=><details key={group.key}><summary>{group.name} · {group.reference} · {group.payments.length} payments · net {money(group.total)}</summary><ol>{group.payments.map(payment=><li key={payment.index}><div><strong>{payment.month.slice(5,7)}/{payment.month.slice(0,4)}</strong><strong>{money(payment.amount)}</strong></div><dl><div><dt>Original reference</dt><dd>{payment.reference}</dd></div><div><dt>Payment ID</dt><dd>{String(payment.id)}</dd></div><div><dt>Payment list row</dt><dd>{payment.index+1}</dd></div>{payment.note&&<div><dt>Note</dt><dd>{payment.note}</dd></div>}</dl></li>)}</ol><InvoiceDisposition project={project} group={group} editing={editing} onReview={onReview}/><p>All payments remain in the totals. Review outcomes do not approve spending or correct the financial system.</p></details>)}</section>;
+}
+
+function InvoiceDisposition({project,group,editing,onReview}){
+ const [snapshot,setSnapshot]=useState(null),[error,setError]=useState(''),trigger=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{if(!editing){setSnapshot(null);setError('')}},[editing]);
+ const review=currentInvoiceReview(project,group),history=(project.invoiceReviews||[]).filter(r=>r.key===group.key);
+ const close=()=>{setSnapshot(null);setError('');trigger.current?.focus()};
+ return <div className="invoice-disposition"><p><strong>{review?.stale?'Payments changed — review again':review?invoiceReviewLabels[review.disposition]:'Not reviewed'}</strong></p>{review&&<p>{formatDateUS(review.at)} · {review.source} · {review.reason}</p>}{history.length>1&&<details><summary>Review history ({history.length})</summary>{history.map((r,i)=><p key={i}>{formatDateUS(r.at)} · {invoiceReviewLabels[r.disposition]} · {r.source} · {r.reason}</p>)}</details>}{editing&&<><Button ref={trigger} variant="outline" onClick={()=>{setSnapshot(invoiceSnapshot(group));setError('')}}>Record review</Button>{snapshot!==null&&<form className="invoice-review-form" onSubmit={e=>{e.preventDefault();const f=new FormData(e.currentTarget);try{if(onReview(group.key,{disposition:String(f.get('disposition')),source:String(f.get('source')),reason:String(f.get('reason')),expectedSnapshot:snapshot})!==false)close();else setError('Review not recorded. Check the error above; your entries are retained.')}catch(e){setError(e.message)}}}><label>Review outcome<OptionalFormSelect name="disposition" label="Review outcome" defaultValue=""><option value="">Choose an outcome</option><option value="expected">Expected repetition (such as installments or a credit)</option><option value="followup">Needs follow-up</option></OptionalFormSelect></label><label>Source reference<Input name="source" maxLength={1000} required/></label><label>Reason<Input name="reason" maxLength={1000} required/></label><p>Stages a review note only. Save budget changes to keep it.</p>{error&&<p role="alert">{error}</p>}<div className="actions"><Button type="submit">Apply review to draft</Button><Button type="button" variant="outline" onClick={close}>Cancel review</Button></div></form>}</>}</div>;
+}

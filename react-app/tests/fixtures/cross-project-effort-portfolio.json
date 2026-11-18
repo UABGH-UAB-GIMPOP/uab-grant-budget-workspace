@@ -1,0 +1,1395 @@
+{
+  "format": "uab-grant-portfolio",
+  "version": 1,
+  "createdAt": "2026-11-17T12:00:00Z",
+  "portfolio": {
+    "schema": 1,
+    "activeId": "alpha",
+    "projects": [
+      {
+        "id": "alpha",
+        "archived": false,
+        "owner": "Example study team",
+        "sponsor": "Synthetic sponsor",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic alpha study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 60,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5,
+                "eff": {
+                  "2026-04": 0
+                }
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic alpha study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 60,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5,
+                "eff": {
+                  "2026-04": 0
+                }
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      },
+      {
+        "id": "beta",
+        "archived": false,
+        "owner": "Example study team",
+        "sponsor": "Synthetic sponsor",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic beta study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 50,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic beta study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 50,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      },
+      {
+        "id": "proposal",
+        "archived": false,
+        "owner": "Example study team",
+        "sponsor": "Synthetic sponsor",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic proposal study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "proposal",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 80,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic proposal study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "proposal",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 80,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      },
+      {
+        "id": "archived",
+        "archived": true,
+        "owner": "Example study team",
+        "sponsor": "Synthetic sponsor",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic archived study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 80,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic archived study",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic planning records",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 80,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "investigator-01",
+                "appointmentFte": 0.5
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 20,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3,
+                "sharedPersonKey": "coordinator-01"
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-july",
+                "kind": "appointmentFte",
+                "personId": "person-1",
+                "month": "2026-07",
+                "value": 1,
+                "source": "Synthetic July appointment plan"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      }
+    ]
+  }
+}

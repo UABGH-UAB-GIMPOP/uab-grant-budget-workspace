@@ -1,0 +1,427 @@
+{
+  "format": "uab-grant-portfolio",
+  "version": 1,
+  "createdAt": "2026-11-17T12:00:00Z",
+  "portfolio": {
+    "schema": 1,
+    "activeId": "qa-split-settlements",
+    "projects": [
+      {
+        "id": "qa-split-settlements",
+        "archived": false,
+        "owner": "Example owner",
+        "sponsor": "Synthetic settlement example",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Split commitment settlement example",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-01",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic January transaction export",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": "split-payment",
+                "reference": "SYNTHETIC-SPLIT",
+                "month": "2026-01",
+                "cat": "Other",
+                "amount": 150,
+                "note": "One payment for two obligations",
+                "settlementReason": "Synthetic allocation to two purchase orders",
+                "commitmentAllocations": [
+                  {
+                    "commitmentId": "first",
+                    "amount": 60
+                  },
+                  {
+                    "commitmentId": "second",
+                    "amount": 90
+                  }
+                ]
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "commitments": [
+              {
+                "id": "first",
+                "name": "First obligation",
+                "source": "Synthetic PO 1",
+                "category": "Other",
+                "amount": 100,
+                "cancelled": 0,
+                "month": "2026-02"
+              },
+              {
+                "id": "second",
+                "name": "Second obligation",
+                "source": "Synthetic PO 2",
+                "category": "Other",
+                "amount": 200,
+                "cancelled": 0,
+                "month": "2026-02"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Split commitment settlement example",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-01",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic January transaction export",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": "split-payment",
+                "reference": "SYNTHETIC-SPLIT",
+                "month": "2026-01",
+                "cat": "Other",
+                "amount": 150,
+                "note": "One payment for two obligations",
+                "settlementReason": "Synthetic allocation to two purchase orders",
+                "commitmentAllocations": [
+                  {
+                    "commitmentId": "first",
+                    "amount": 60
+                  },
+                  {
+                    "commitmentId": "second",
+                    "amount": 90
+                  }
+                ]
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "commitments": [
+              {
+                "id": "first",
+                "name": "First obligation",
+                "source": "Synthetic PO 1",
+                "category": "Other",
+                "amount": 100,
+                "cancelled": 0,
+                "month": "2026-02"
+              },
+              {
+                "id": "second",
+                "name": "Second obligation",
+                "source": "Synthetic PO 2",
+                "category": "Other",
+                "amount": 200,
+                "cancelled": 0,
+                "month": "2026-02"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      }
+    ]
+  }
+}

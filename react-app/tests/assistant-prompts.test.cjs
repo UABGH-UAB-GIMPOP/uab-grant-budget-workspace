@@ -1,0 +1,6 @@
+const {test}=require('node:test'),assert=require('node:assert/strict');
+test('starter questions use active-project categories and assumptions without project names',async()=>{
+ const {suggestedAssistantQuestions}=await import('../src/lib/assistant-prompts.js'),E=(await import('../src/lib/engine.js')).default,project=E.demo();project.grant.title='Private Project Title';project.people[0].name='Private Person';
+ const questions=suggestedAssistantQuestions(project);assert.ok(questions.includes('What should I review in the Personnel budget?'));assert.ok(questions.some(q=>/^What if monthly (Travel|Other) were \$[\d,]+\?$/.test(q)));assert.ok(questions.some(q=>q.includes('projected remaining balance')));assert.doesNotMatch(questions.join(' '),/Private Project Title|Private Person/);
+ const suppliesOnly=structuredClone(project);suppliesOnly.people=[];suppliesOnly.ledger=[];suppliesOnly.costs=[];suppliesOnly.subawards=[];suppliesOnly.planned={Supplies:[1000]};suppliesOnly.supplies=[{qty:1,unit:10,month:'2026-12'}];suppliesOnly.assume={Travel:null,Other:null};const supplyQuestions=suggestedAssistantQuestions(suppliesOnly);assert.ok(supplyQuestions.includes('What should I review in the Supplies budget?'));assert.equal(supplyQuestions.some(q=>/Personnel|Travel|Other/.test(q)),false);
+});

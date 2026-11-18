@@ -1,0 +1,3211 @@
+{
+  "format": "uab-grant-portfolio",
+  "version": 1,
+  "createdAt": "2026-11-17T12:00:00.000Z",
+  "portfolio": {
+    "schema": 1,
+    "activeId": "qa-proposal",
+    "projects": [
+      {
+        "id": "qa-award",
+        "archived": false,
+        "owner": "Example owner",
+        "sponsor": "Example public sponsor",
+        "funderType": "Federal",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic overspend acceptance award",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic October statement",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                0,
+                0,
+                0
+              ],
+              "Supplies": [
+                0,
+                0,
+                0
+              ],
+              "Travel": [
+                0,
+                0,
+                0
+              ],
+              "Other": [
+                0,
+                0,
+                0
+              ],
+              "Equipment": [
+                0,
+                0,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                0,
+                0,
+                0
+              ]
+            },
+            "ledger": [
+              {
+                "id": 1,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-01"
+              },
+              {
+                "id": 2,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-01"
+              },
+              {
+                "id": 3,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-01"
+              },
+              {
+                "id": 4,
+                "cat": "Travel",
+                "month": "2026-01",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-01"
+              },
+              {
+                "id": 5,
+                "cat": "Other",
+                "month": "2026-01",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-01"
+              },
+              {
+                "id": 6,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-02"
+              },
+              {
+                "id": 7,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-02"
+              },
+              {
+                "id": 8,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-02"
+              },
+              {
+                "id": 9,
+                "cat": "Travel",
+                "month": "2026-02",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-02"
+              },
+              {
+                "id": 10,
+                "cat": "Other",
+                "month": "2026-02",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-02"
+              },
+              {
+                "id": 11,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-03"
+              },
+              {
+                "id": 12,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-03"
+              },
+              {
+                "id": 13,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-03"
+              },
+              {
+                "id": 14,
+                "cat": "Travel",
+                "month": "2026-03",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-03"
+              },
+              {
+                "id": 15,
+                "cat": "Other",
+                "month": "2026-03",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-03"
+              },
+              {
+                "id": 16,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-04"
+              },
+              {
+                "id": 17,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-04"
+              },
+              {
+                "id": 18,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-04"
+              },
+              {
+                "id": 19,
+                "cat": "Travel",
+                "month": "2026-04",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-04"
+              },
+              {
+                "id": 20,
+                "cat": "Other",
+                "month": "2026-04",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-04"
+              },
+              {
+                "id": 21,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-05"
+              },
+              {
+                "id": 22,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-05"
+              },
+              {
+                "id": 23,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-05"
+              },
+              {
+                "id": 24,
+                "cat": "Travel",
+                "month": "2026-05",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-05"
+              },
+              {
+                "id": 25,
+                "cat": "Other",
+                "month": "2026-05",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-05"
+              },
+              {
+                "id": 26,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-06"
+              },
+              {
+                "id": 27,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-06"
+              },
+              {
+                "id": 28,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-06"
+              },
+              {
+                "id": 29,
+                "cat": "Travel",
+                "month": "2026-06",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-06"
+              },
+              {
+                "id": 30,
+                "cat": "Other",
+                "month": "2026-06",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-06"
+              },
+              {
+                "id": 31,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-07"
+              },
+              {
+                "id": 32,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-07"
+              },
+              {
+                "id": 33,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-07"
+              },
+              {
+                "id": 34,
+                "cat": "Travel",
+                "month": "2026-07",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-07"
+              },
+              {
+                "id": 35,
+                "cat": "Other",
+                "month": "2026-07",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-07"
+              },
+              {
+                "id": 36,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-08"
+              },
+              {
+                "id": 37,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-08"
+              },
+              {
+                "id": 38,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-08"
+              },
+              {
+                "id": 39,
+                "cat": "Travel",
+                "month": "2026-08",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-08"
+              },
+              {
+                "id": 40,
+                "cat": "Other",
+                "month": "2026-08",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-08"
+              },
+              {
+                "id": 41,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-09"
+              },
+              {
+                "id": 42,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-09"
+              },
+              {
+                "id": 43,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-09"
+              },
+              {
+                "id": 44,
+                "cat": "Travel",
+                "month": "2026-09",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-09"
+              },
+              {
+                "id": 45,
+                "cat": "Other",
+                "month": "2026-09",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-09"
+              },
+              {
+                "id": 46,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-10"
+              },
+              {
+                "id": 47,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-10"
+              },
+              {
+                "id": 48,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-10"
+              },
+              {
+                "id": 49,
+                "cat": "Travel",
+                "month": "2026-10",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-10"
+              },
+              {
+                "id": 50,
+                "cat": "Other",
+                "month": "2026-10",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-10"
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "documents": [
+              {
+                "id": "qa-document-1",
+                "title": "Example document 1",
+                "url": "https://example.org/documents/1",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-2",
+                "title": "Example document 2",
+                "url": "https://example.org/documents/2",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-3",
+                "title": "Example document 3",
+                "url": "https://example.org/documents/3",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-4",
+                "title": "Example document 4",
+                "url": "https://example.org/documents/4",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-5",
+                "title": "Example document 5",
+                "url": "https://example.org/documents/5",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-6",
+                "title": "Example document 6",
+                "url": "https://example.org/documents/6",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-7",
+                "title": "Example document 7",
+                "url": "https://example.org/documents/7",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-8",
+                "title": "Example document 8",
+                "url": "https://example.org/documents/8",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-9",
+                "title": "Example document 9",
+                "url": "https://example.org/documents/9",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-10",
+                "title": "Example document 10",
+                "url": "https://example.org/documents/10",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-11",
+                "title": "Example document 11",
+                "url": "https://example.org/documents/11",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-12",
+                "title": "Example document 12",
+                "url": "https://example.org/documents/12",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-13",
+                "title": "Example document 13",
+                "url": "https://example.org/documents/13",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-14",
+                "title": "Example document 14",
+                "url": "https://example.org/documents/14",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-15",
+                "title": "Example document 15",
+                "url": "https://example.org/documents/15",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-16",
+                "title": "Example document 16",
+                "url": "https://example.org/documents/16",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-17",
+                "title": "Example document 17",
+                "url": "https://example.org/documents/17",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-18",
+                "title": "Example document 18",
+                "url": "https://example.org/documents/18",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-19",
+                "title": "Example document 19",
+                "url": "https://example.org/documents/19",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-20",
+                "title": "Example document 20",
+                "url": "https://example.org/documents/20",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-21",
+                "title": "Example document 21",
+                "url": "https://example.org/documents/21",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-22",
+                "title": "Example document 22",
+                "url": "https://example.org/documents/22",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-23",
+                "title": "Example document 23",
+                "url": "https://example.org/documents/23",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-24",
+                "title": "Example document 24",
+                "url": "https://example.org/documents/24",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-25",
+                "title": "Example document 25",
+                "url": "https://example.org/documents/25",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-26",
+                "title": "Example document 26",
+                "url": "https://example.org/documents/26",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-27",
+                "title": "Example document 27",
+                "url": "https://example.org/documents/27",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-28",
+                "title": "Example document 28",
+                "url": "https://example.org/documents/28",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-29",
+                "title": "Example document 29",
+                "url": "https://example.org/documents/29",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-30",
+                "title": "Example document 30",
+                "url": "https://example.org/documents/30",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-31",
+                "title": "Example document 31",
+                "url": "https://example.org/documents/31",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-32",
+                "title": "Example document 32",
+                "url": "https://example.org/documents/32",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-33",
+                "title": "Example document 33",
+                "url": "https://example.org/documents/33",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-34",
+                "title": "Example document 34",
+                "url": "https://example.org/documents/34",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-35",
+                "title": "Example document 35",
+                "url": "https://example.org/documents/35",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-36",
+                "title": "Example document 36",
+                "url": "https://example.org/documents/36",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-37",
+                "title": "Example document 37",
+                "url": "https://example.org/documents/37",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-38",
+                "title": "Example document 38",
+                "url": "https://example.org/documents/38",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-39",
+                "title": "Example document 39",
+                "url": "https://example.org/documents/39",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-40",
+                "title": "Example document 40",
+                "url": "https://example.org/documents/40",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-41",
+                "title": "Example document 41",
+                "url": "https://example.org/documents/41",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-42",
+                "title": "Example document 42",
+                "url": "https://example.org/documents/42",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-43",
+                "title": "Example document 43",
+                "url": "https://example.org/documents/43",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-44",
+                "title": "Example document 44",
+                "url": "https://example.org/documents/44",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-45",
+                "title": "Example document 45",
+                "url": "https://example.org/documents/45",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-46",
+                "title": "Example document 46",
+                "url": "https://example.org/documents/46",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-47",
+                "title": "Example document 47",
+                "url": "https://example.org/documents/47",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-48",
+                "title": "Example document 48",
+                "url": "https://example.org/documents/48",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-49",
+                "title": "Example document 49",
+                "url": "https://example.org/documents/49",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-50",
+                "title": "Example document 50",
+                "url": "https://example.org/documents/50",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-51",
+                "title": "Example document 51",
+                "url": "https://example.org/documents/51",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              },
+              {
+                "id": "qa-document-52",
+                "title": "Example document 52",
+                "url": "https://example.org/documents/52",
+                "category": "Other",
+                "note": "Synthetic pagination fixture",
+                "archived": false
+              }
+            ],
+            "milestones": [
+              {
+                "id": "qa-evidence-1",
+                "title": "Example milestone 1",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/1"
+              },
+              {
+                "id": "qa-evidence-2",
+                "title": "Example milestone 2",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/2"
+              },
+              {
+                "id": "qa-evidence-3",
+                "title": "Example milestone 3",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/3"
+              },
+              {
+                "id": "qa-evidence-4",
+                "title": "Example milestone 4",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/4"
+              },
+              {
+                "id": "qa-evidence-5",
+                "title": "Example milestone 5",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/5"
+              },
+              {
+                "id": "qa-evidence-6",
+                "title": "Example milestone 6",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/6"
+              },
+              {
+                "id": "qa-evidence-7",
+                "title": "Example milestone 7",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/7"
+              },
+              {
+                "id": "qa-evidence-8",
+                "title": "Example milestone 8",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/8"
+              },
+              {
+                "id": "qa-evidence-9",
+                "title": "Example milestone 9",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/9"
+              },
+              {
+                "id": "qa-evidence-10",
+                "title": "Example milestone 10",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/10"
+              },
+              {
+                "id": "qa-evidence-11",
+                "title": "Example milestone 11",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/11"
+              },
+              {
+                "id": "qa-evidence-12",
+                "title": "Example milestone 12",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/12"
+              },
+              {
+                "id": "qa-evidence-13",
+                "title": "Example milestone 13",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/13"
+              },
+              {
+                "id": "qa-evidence-14",
+                "title": "Example milestone 14",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/14"
+              },
+              {
+                "id": "qa-evidence-15",
+                "title": "Example milestone 15",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/15"
+              },
+              {
+                "id": "qa-evidence-16",
+                "title": "Example milestone 16",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/16"
+              },
+              {
+                "id": "qa-evidence-17",
+                "title": "Example milestone 17",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/17"
+              },
+              {
+                "id": "qa-evidence-18",
+                "title": "Example milestone 18",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/18"
+              },
+              {
+                "id": "qa-evidence-19",
+                "title": "Example milestone 19",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/19"
+              },
+              {
+                "id": "qa-evidence-20",
+                "title": "Example milestone 20",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/20"
+              },
+              {
+                "id": "qa-evidence-21",
+                "title": "Example milestone 21",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/21"
+              },
+              {
+                "id": "qa-evidence-22",
+                "title": "Example milestone 22",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/22"
+              },
+              {
+                "id": "qa-evidence-23",
+                "title": "Example milestone 23",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/23"
+              },
+              {
+                "id": "qa-evidence-24",
+                "title": "Example milestone 24",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/24"
+              },
+              {
+                "id": "qa-evidence-25",
+                "title": "Example milestone 25",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/25"
+              },
+              {
+                "id": "qa-evidence-26",
+                "title": "Example milestone 26",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/26"
+              },
+              {
+                "id": "qa-evidence-27",
+                "title": "Example milestone 27",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/evidence/27"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic overspend acceptance award",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "award",
+              "source": "Synthetic October statement",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                0,
+                0,
+                0
+              ],
+              "Supplies": [
+                0,
+                0,
+                0
+              ],
+              "Travel": [
+                0,
+                0,
+                0
+              ],
+              "Other": [
+                0,
+                0,
+                0
+              ],
+              "Equipment": [
+                0,
+                0,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                0,
+                0,
+                0
+              ]
+            },
+            "ledger": [
+              {
+                "id": 1,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-01"
+              },
+              {
+                "id": 2,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-01"
+              },
+              {
+                "id": 3,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-01"
+              },
+              {
+                "id": 4,
+                "cat": "Travel",
+                "month": "2026-01",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-01"
+              },
+              {
+                "id": 5,
+                "cat": "Other",
+                "month": "2026-01",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-01"
+              },
+              {
+                "id": 6,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-02"
+              },
+              {
+                "id": 7,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-02"
+              },
+              {
+                "id": 8,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-02"
+              },
+              {
+                "id": 9,
+                "cat": "Travel",
+                "month": "2026-02",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-02"
+              },
+              {
+                "id": 10,
+                "cat": "Other",
+                "month": "2026-02",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-02"
+              },
+              {
+                "id": 11,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-03"
+              },
+              {
+                "id": 12,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-03"
+              },
+              {
+                "id": 13,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-03"
+              },
+              {
+                "id": 14,
+                "cat": "Travel",
+                "month": "2026-03",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-03"
+              },
+              {
+                "id": 15,
+                "cat": "Other",
+                "month": "2026-03",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-03"
+              },
+              {
+                "id": 16,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-04"
+              },
+              {
+                "id": 17,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-04"
+              },
+              {
+                "id": 18,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-04"
+              },
+              {
+                "id": 19,
+                "cat": "Travel",
+                "month": "2026-04",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-04"
+              },
+              {
+                "id": 20,
+                "cat": "Other",
+                "month": "2026-04",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-04"
+              },
+              {
+                "id": 21,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-05"
+              },
+              {
+                "id": 22,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-05"
+              },
+              {
+                "id": 23,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-05"
+              },
+              {
+                "id": 24,
+                "cat": "Travel",
+                "month": "2026-05",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-05"
+              },
+              {
+                "id": 25,
+                "cat": "Other",
+                "month": "2026-05",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-05"
+              },
+              {
+                "id": 26,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-06"
+              },
+              {
+                "id": 27,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-06"
+              },
+              {
+                "id": 28,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-06"
+              },
+              {
+                "id": 29,
+                "cat": "Travel",
+                "month": "2026-06",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-06"
+              },
+              {
+                "id": 30,
+                "cat": "Other",
+                "month": "2026-06",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-06"
+              },
+              {
+                "id": 31,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-07"
+              },
+              {
+                "id": 32,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-07"
+              },
+              {
+                "id": 33,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-07"
+              },
+              {
+                "id": 34,
+                "cat": "Travel",
+                "month": "2026-07",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-07"
+              },
+              {
+                "id": 35,
+                "cat": "Other",
+                "month": "2026-07",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-07"
+              },
+              {
+                "id": 36,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-08"
+              },
+              {
+                "id": 37,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-08"
+              },
+              {
+                "id": 38,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-08"
+              },
+              {
+                "id": 39,
+                "cat": "Travel",
+                "month": "2026-08",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-08"
+              },
+              {
+                "id": 40,
+                "cat": "Other",
+                "month": "2026-08",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-08"
+              },
+              {
+                "id": 41,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-09"
+              },
+              {
+                "id": 42,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-09"
+              },
+              {
+                "id": 43,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-09"
+              },
+              {
+                "id": 44,
+                "cat": "Travel",
+                "month": "2026-09",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-09"
+              },
+              {
+                "id": 45,
+                "cat": "Other",
+                "month": "2026-09",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-09"
+              },
+              {
+                "id": 46,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-10"
+              },
+              {
+                "id": 47,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-10"
+              },
+              {
+                "id": 48,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-10"
+              },
+              {
+                "id": 49,
+                "cat": "Travel",
+                "month": "2026-10",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-10"
+              },
+              {
+                "id": 50,
+                "cat": "Other",
+                "month": "2026-10",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-10"
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "documents": [
+              {
+                "id": "qa-terms",
+                "title": "Example award terms",
+                "url": "https://example.org/award-terms",
+                "category": "Award terms",
+                "note": "Synthetic link metadata",
+                "archived": false
+              }
+            ],
+            "milestones": [
+              {
+                "id": "qa-report",
+                "title": "Example report",
+                "owner": "Example owner",
+                "due": "2026-12-01",
+                "done": false,
+                "cadence": "Once",
+                "evidence": "https://example.org/report"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      },
+      {
+        "id": "qa-proposal",
+        "archived": false,
+        "owner": "Example proposal owner",
+        "sponsor": "Example foundation",
+        "funderType": "Foundation",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic acceptance proposal",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "proposal",
+              "source": "Synthetic October statement",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": 1,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-01"
+              },
+              {
+                "id": 2,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-01"
+              },
+              {
+                "id": 3,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-01"
+              },
+              {
+                "id": 4,
+                "cat": "Travel",
+                "month": "2026-01",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-01"
+              },
+              {
+                "id": 5,
+                "cat": "Other",
+                "month": "2026-01",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-01"
+              },
+              {
+                "id": 6,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-02"
+              },
+              {
+                "id": 7,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-02"
+              },
+              {
+                "id": 8,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-02"
+              },
+              {
+                "id": 9,
+                "cat": "Travel",
+                "month": "2026-02",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-02"
+              },
+              {
+                "id": 10,
+                "cat": "Other",
+                "month": "2026-02",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-02"
+              },
+              {
+                "id": 11,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-03"
+              },
+              {
+                "id": 12,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-03"
+              },
+              {
+                "id": 13,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-03"
+              },
+              {
+                "id": 14,
+                "cat": "Travel",
+                "month": "2026-03",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-03"
+              },
+              {
+                "id": 15,
+                "cat": "Other",
+                "month": "2026-03",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-03"
+              },
+              {
+                "id": 16,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-04"
+              },
+              {
+                "id": 17,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-04"
+              },
+              {
+                "id": 18,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-04"
+              },
+              {
+                "id": 19,
+                "cat": "Travel",
+                "month": "2026-04",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-04"
+              },
+              {
+                "id": 20,
+                "cat": "Other",
+                "month": "2026-04",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-04"
+              },
+              {
+                "id": 21,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-05"
+              },
+              {
+                "id": 22,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-05"
+              },
+              {
+                "id": 23,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-05"
+              },
+              {
+                "id": 24,
+                "cat": "Travel",
+                "month": "2026-05",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-05"
+              },
+              {
+                "id": 25,
+                "cat": "Other",
+                "month": "2026-05",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-05"
+              },
+              {
+                "id": 26,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-06"
+              },
+              {
+                "id": 27,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-06"
+              },
+              {
+                "id": 28,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-06"
+              },
+              {
+                "id": 29,
+                "cat": "Travel",
+                "month": "2026-06",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-06"
+              },
+              {
+                "id": 30,
+                "cat": "Other",
+                "month": "2026-06",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-06"
+              },
+              {
+                "id": 31,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-07"
+              },
+              {
+                "id": 32,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-07"
+              },
+              {
+                "id": 33,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-07"
+              },
+              {
+                "id": 34,
+                "cat": "Travel",
+                "month": "2026-07",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-07"
+              },
+              {
+                "id": 35,
+                "cat": "Other",
+                "month": "2026-07",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-07"
+              },
+              {
+                "id": 36,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-08"
+              },
+              {
+                "id": 37,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-08"
+              },
+              {
+                "id": 38,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-08"
+              },
+              {
+                "id": 39,
+                "cat": "Travel",
+                "month": "2026-08",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-08"
+              },
+              {
+                "id": 40,
+                "cat": "Other",
+                "month": "2026-08",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-08"
+              },
+              {
+                "id": 41,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-09"
+              },
+              {
+                "id": 42,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-09"
+              },
+              {
+                "id": 43,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-09"
+              },
+              {
+                "id": 44,
+                "cat": "Travel",
+                "month": "2026-09",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-09"
+              },
+              {
+                "id": 45,
+                "cat": "Other",
+                "month": "2026-09",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-09"
+              },
+              {
+                "id": 46,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-10"
+              },
+              {
+                "id": 47,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-10"
+              },
+              {
+                "id": 48,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-10"
+              },
+              {
+                "id": 49,
+                "cat": "Travel",
+                "month": "2026-10",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-10"
+              },
+              {
+                "id": 50,
+                "cat": "Other",
+                "month": "2026-10",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-10"
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": []
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Synthetic acceptance proposal",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-10",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 228000,
+              "mode": "proposal",
+              "source": "Synthetic October statement",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": 1,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-01"
+              },
+              {
+                "id": 2,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-01"
+              },
+              {
+                "id": 3,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-01"
+              },
+              {
+                "id": 4,
+                "cat": "Travel",
+                "month": "2026-01",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-01"
+              },
+              {
+                "id": 5,
+                "cat": "Other",
+                "month": "2026-01",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-01"
+              },
+              {
+                "id": 6,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-02"
+              },
+              {
+                "id": 7,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-02"
+              },
+              {
+                "id": 8,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-02",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-02"
+              },
+              {
+                "id": 9,
+                "cat": "Travel",
+                "month": "2026-02",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-02"
+              },
+              {
+                "id": 10,
+                "cat": "Other",
+                "month": "2026-02",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-02"
+              },
+              {
+                "id": 11,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-03"
+              },
+              {
+                "id": 12,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-03"
+              },
+              {
+                "id": 13,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-03",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-03"
+              },
+              {
+                "id": 14,
+                "cat": "Travel",
+                "month": "2026-03",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-03"
+              },
+              {
+                "id": 15,
+                "cat": "Other",
+                "month": "2026-03",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-03"
+              },
+              {
+                "id": 16,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-04"
+              },
+              {
+                "id": 17,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-04"
+              },
+              {
+                "id": 18,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-04",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-04"
+              },
+              {
+                "id": 19,
+                "cat": "Travel",
+                "month": "2026-04",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-04"
+              },
+              {
+                "id": 20,
+                "cat": "Other",
+                "month": "2026-04",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-04"
+              },
+              {
+                "id": 21,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-05"
+              },
+              {
+                "id": 22,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-05"
+              },
+              {
+                "id": 23,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-05",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-05"
+              },
+              {
+                "id": 24,
+                "cat": "Travel",
+                "month": "2026-05",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-05"
+              },
+              {
+                "id": 25,
+                "cat": "Other",
+                "month": "2026-05",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-05"
+              },
+              {
+                "id": 26,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-06"
+              },
+              {
+                "id": 27,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-06"
+              },
+              {
+                "id": 28,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-06",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-06"
+              },
+              {
+                "id": 29,
+                "cat": "Travel",
+                "month": "2026-06",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-06"
+              },
+              {
+                "id": 30,
+                "cat": "Other",
+                "month": "2026-06",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-06"
+              },
+              {
+                "id": 31,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-07"
+              },
+              {
+                "id": 32,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-07"
+              },
+              {
+                "id": 33,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-07",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-07"
+              },
+              {
+                "id": 34,
+                "cat": "Travel",
+                "month": "2026-07",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-07"
+              },
+              {
+                "id": 35,
+                "cat": "Other",
+                "month": "2026-07",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-07"
+              },
+              {
+                "id": 36,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-08"
+              },
+              {
+                "id": 37,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-08"
+              },
+              {
+                "id": 38,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-08",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-08"
+              },
+              {
+                "id": 39,
+                "cat": "Travel",
+                "month": "2026-08",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-08"
+              },
+              {
+                "id": 40,
+                "cat": "Other",
+                "month": "2026-08",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-08"
+              },
+              {
+                "id": 41,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-09"
+              },
+              {
+                "id": 42,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-09"
+              },
+              {
+                "id": 43,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-09",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-09"
+              },
+              {
+                "id": 44,
+                "cat": "Travel",
+                "month": "2026-09",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-09"
+              },
+              {
+                "id": 45,
+                "cat": "Other",
+                "month": "2026-09",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-09"
+              },
+              {
+                "id": 46,
+                "personId": "person-1",
+                "person": "Alex Rivera",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 3858.9,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-1-2026-10"
+              },
+              {
+                "id": 47,
+                "personId": "person-2",
+                "person": "Jordan Lee",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 8394,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-2-2026-10"
+              },
+              {
+                "id": 48,
+                "personId": "person-3",
+                "person": "Sam Patel",
+                "cat": "Personnel",
+                "month": "2026-10",
+                "amount": 990.96,
+                "note": "Synthetic payroll",
+                "reference": "PAY-person-3-2026-10"
+              },
+              {
+                "id": 49,
+                "cat": "Travel",
+                "month": "2026-10",
+                "amount": 400,
+                "note": "Synthetic travel",
+                "reference": "TR-2026-10"
+              },
+              {
+                "id": 50,
+                "cat": "Other",
+                "month": "2026-10",
+                "amount": 1000,
+                "note": "Synthetic incentives",
+                "reference": "OT-2026-10"
+              }
+            ],
+            "people": [
+              {
+                "id": "person-1",
+                "name": "Alex Rivera",
+                "role": "PI",
+                "salary": 300000,
+                "appointment": 12,
+                "effort": 15,
+                "fringe": 35.4,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-2",
+                "name": "Jordan Lee",
+                "role": "Coordinator",
+                "salary": 72000,
+                "appointment": 12,
+                "effort": 100,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              },
+              {
+                "id": "person-3",
+                "name": "Sam Patel",
+                "role": "Financial officer",
+                "salary": 85000,
+                "appointment": 12,
+                "effort": 10,
+                "fringe": 39.9,
+                "raiseDate": "2027-01",
+                "raisePct": 3
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": []
+          },
+          "scenario": "Working budget"
+        }
+      }
+    ]
+  }
+}
