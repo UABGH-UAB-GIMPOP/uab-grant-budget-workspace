@@ -1,0 +1,395 @@
+{
+  "format": "uab-grant-portfolio",
+  "version": 1,
+  "createdAt": "2026-11-17T12:00:00.000Z",
+  "portfolio": {
+    "schema": 1,
+    "activeId": "qa-salary-timeline",
+    "projects": [
+      {
+        "id": "qa-salary-timeline",
+        "archived": false,
+        "owner": "Example owner",
+        "sponsor": "Synthetic salary timeline example",
+        "funderType": "Unknown",
+        "archive": {
+          "project": {
+            "schema": 1,
+            "grant": {
+              "title": "Dated salary and appointment changes",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-01",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 221900,
+              "mode": "award",
+              "source": "Synthetic January payroll record",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": "payroll",
+                "personId": "half-time",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3000,
+                "reference": "EXAMPLE-PAYROLL",
+                "note": "Synthetic recorded payroll"
+              }
+            ],
+            "people": [
+              {
+                "id": "half-time",
+                "name": "Example half-time investigator",
+                "role": "Investigator",
+                "salary": 120000,
+                "appointment": 12,
+                "appointmentFte": 0.5,
+                "effort": 30,
+                "fringe": 25,
+                "raisePct": 3,
+                "raiseDate": "2027-07",
+                "changes": [
+                  {
+                    "id": "sept-zero",
+                    "month": "2027-09",
+                    "percent": 0,
+                    "source": "Synthetic no-change notice"
+                  },
+                  {
+                    "id": "march-salary",
+                    "month": "2027-03",
+                    "salary": 132000,
+                    "source": "Synthetic salary notice",
+                    "note": "Original source metadata"
+                  },
+                  {
+                    "id": "annual-plan",
+                    "month": "2028-01",
+                    "percent": 2,
+                    "repeat": {
+                      "everyMonths": 12,
+                      "through": "2029-01"
+                    },
+                    "source": "Synthetic annual planning assumption"
+                  }
+                ]
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-change",
+                "kind": "appointmentFte",
+                "personId": "half-time",
+                "month": "2027-07",
+                "value": 0.75,
+                "source": "Synthetic appointment action"
+              }
+            ]
+          },
+          "baseline": {
+            "schema": 1,
+            "grant": {
+              "title": "Dated salary and appointment changes",
+              "start": "2026-01",
+              "end": "2028-12",
+              "asOf": "2026-01",
+              "indirect": 49,
+              "base": "MTDC",
+              "salaryCap": 221900,
+              "mode": "award",
+              "source": "Synthetic January payroll record",
+              "ruleSource": "Synthetic test profile; verify award terms",
+              "ruleStatus": "assumed",
+              "reconciled": false
+            },
+            "planned": {
+              "Personnel": [
+                175000,
+                180000,
+                185000
+              ],
+              "Supplies": [
+                20000,
+                15000,
+                10000
+              ],
+              "Travel": [
+                6000,
+                7000,
+                8000
+              ],
+              "Other": [
+                15000,
+                16000,
+                17000
+              ],
+              "Equipment": [
+                0,
+                12000,
+                0
+              ],
+              "Patient care": [
+                0,
+                0,
+                0
+              ],
+              "Tuition": [
+                0,
+                0,
+                0
+              ],
+              "Participant support": [
+                0,
+                0,
+                0
+              ],
+              "Consultants": [
+                0,
+                0,
+                0
+              ],
+              "Consortium/Contractual (Subawards)": [
+                60000,
+                60000,
+                60000
+              ]
+            },
+            "ledger": [
+              {
+                "id": "payroll",
+                "personId": "half-time",
+                "cat": "Personnel",
+                "month": "2026-01",
+                "amount": 3000,
+                "reference": "EXAMPLE-PAYROLL",
+                "note": "Synthetic recorded payroll"
+              }
+            ],
+            "people": [
+              {
+                "id": "half-time",
+                "name": "Example half-time investigator",
+                "role": "Investigator",
+                "salary": 120000,
+                "appointment": 12,
+                "appointmentFte": 0.5,
+                "effort": 30,
+                "fringe": 25,
+                "raisePct": 3,
+                "raiseDate": "2027-07",
+                "changes": [
+                  {
+                    "id": "sept-zero",
+                    "month": "2027-09",
+                    "percent": 0,
+                    "source": "Synthetic no-change notice"
+                  },
+                  {
+                    "id": "march-salary",
+                    "month": "2027-03",
+                    "salary": 132000,
+                    "source": "Synthetic salary notice",
+                    "note": "Original source metadata"
+                  },
+                  {
+                    "id": "annual-plan",
+                    "month": "2028-01",
+                    "percent": 2,
+                    "repeat": {
+                      "everyMonths": 12,
+                      "through": "2029-01"
+                    },
+                    "source": "Synthetic annual planning assumption"
+                  }
+                ]
+              }
+            ],
+            "supplies": [
+              {
+                "id": "s1",
+                "name": "Home blood pressure monitors",
+                "qty": 120,
+                "unit": 55,
+                "month": "2026-12"
+              },
+              {
+                "id": "s2",
+                "name": "Digital scales",
+                "qty": 120,
+                "unit": 42,
+                "month": "2027-01"
+              }
+            ],
+            "costs": [
+              {
+                "id": "c1",
+                "name": "Research equipment",
+                "cat": "Equipment",
+                "amount": 12000,
+                "month": "2027-03"
+              }
+            ],
+            "assume": {
+              "Travel": 500,
+              "Other": 1200
+            },
+            "scenario": {
+              "qty": 0,
+              "cost": 0
+            },
+            "subawards": [
+              {
+                "id": 1,
+                "name": "Example Community Partner",
+                "pi": "Site lead",
+                "start": "2026-01",
+                "end": "2028-12",
+                "total": 180000,
+                "subj": 50000
+              }
+            ],
+            "subPays": [
+              {
+                "id": 1,
+                "sub": 1,
+                "month": "2026-06",
+                "amount": 30000,
+                "inv": "DEMO-01",
+                "note": "Synthetic payment"
+              }
+            ],
+            "nextId": 100,
+            "subNext": 10,
+            "postedFa": {},
+            "audit": [],
+            "rateChanges": [
+              {
+                "id": "fte-change",
+                "kind": "appointmentFte",
+                "personId": "half-time",
+                "month": "2027-07",
+                "value": 0.75,
+                "source": "Synthetic appointment action"
+              }
+            ]
+          },
+          "scenario": "Working budget"
+        }
+      }
+    ]
+  }
+}

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "npm test && npm run typecheck && vite build",
-    "test": "node --test tests/*.test.cjs",
+    "build": "npm test && npm run typecheck && vite build && node scripts/test-built-workbook-worker.cjs",
+    "test": "node scripts/run-tests.cjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -19,12 +19,14 @@
     "@radix-ui/react-tabs": "latest",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fflate": "file:vendor/fflate-0.8.3.tgz",
     "lucide-react": "^0.468.0",
     "lz-string": "1.5.0",
     "radix-ui": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.0.0"
+    "tailwind-merge": "^3.0.0",
+    "xlsx": "file:vendor/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

@@ -1,0 +1,1 @@
+export function validateSharedPersonnelKey(person){const key=person.sharedPersonKey;return key===undefined||typeof key==='string'&&key.length>0&&key.length<=120&&key.trim()===key&&!/[\u0000-\u001f\u007f-\u009f]/.test(key)?[]:[{level:'error',message:'Shared personnel key must be a trimmed nonblank string of at most 120 characters without control characters.'}];}

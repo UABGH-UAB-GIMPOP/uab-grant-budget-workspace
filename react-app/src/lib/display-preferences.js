@@ -1,4 +1,7 @@
 export const DISPLAY_KEY='uab-grant-display-v1';
 export function loadHighlighting(storage){try{return JSON.parse(storage.getItem(DISPLAY_KEY)||'null')?.highlighting!==false}catch{return true}}
-export function saveHighlighting(storage,enabled){storage.setItem(DISPLAY_KEY,JSON.stringify({highlighting:enabled}));}
+export function saveHighlighting(storage,enabled){saveFinancialPreferences(storage,enabled,loadRemainingThreshold(storage));}
 export function remainingStatus(amount){return typeof amount==='number'&&Number.isFinite(amount)&&amount<0?'Projected overspend':null;}
+export function loadRemainingThreshold(storage){try{const value=JSON.parse(storage.getItem(DISPLAY_KEY)||'null')?.remainingThreshold;return Number.isInteger(value)&&value>=1&&value<=100?value:null}catch{return null}}
+export function saveFinancialPreferences(storage,highlighting,remainingThreshold){if(remainingThreshold!==null&&(!Number.isInteger(remainingThreshold)||remainingThreshold<1||remainingThreshold>100))throw Error('Enter a whole-number remaining threshold from 1 to 100%.');storage.setItem(DISPLAY_KEY,JSON.stringify({highlighting:highlighting===true,remainingThreshold}));}
+export function thresholdStatus(value,budget,threshold){if(!Number.isFinite(value)||value<0||!Number.isFinite(budget)||budget<=0||!Number.isInteger(threshold)||threshold<1||threshold>100)return null;const remaining=Math.round(value*100),base=Math.round(budget*100);if(!Number.isSafeInteger(remaining)||!Number.isSafeInteger(base)||base<=0)return null;return BigInt(remaining)*100n<=BigInt(base)*BigInt(threshold)?`At or below ${threshold}% remaining`:null;}

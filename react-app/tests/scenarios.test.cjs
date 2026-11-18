@@ -38,3 +38,22 @@ test('scenario financial assumptions cannot reprice historical actuals but futur
  for(const mutate of [x=>x.grant.indirect=30,x=>x.grant.base='TDC',x=>x.subawards[0].subj=1,x=>x.rateChanges=[{id:'r',kind:'indirect',month:'2026-02',value:25,source:'Synthetic'}]]){const changed=structuredClone(saved);mutate(changed);assert.ok(validateProject(changed).some(x=>x.level==='error'),JSON.stringify(changed.grant));}
  const future=structuredClone(saved);future.rateChanges=[{id:'future-rate',kind:'indirect',month:'2027-01',value:25,source:'Synthetic assumption'}];assert.equal(validateProject(future).filter(x=>x.level==='error').length,0);assert.equal(E.calculate(future).total.actual,E.calculate(p).total.actual);assert.notEqual(E.calculate(future).total.proj,E.calculate(p).total.proj);
 });
+test('opening an older scenario preserves the latest source actuals and baseline across reload and switches',async()=>{
+ const {saveScenario,restoreScenario,returnToSource}=await import('../src/lib/scenarios.js'),{normalizeArchive}=await import('../src/lib/archive.js'),{validateProject}=await import('../src/lib/validate-project.js'),{reportingProject}=await import('../src/lib/portfolio.js');
+ const p=E.demo();let source=returnToSource(saveScenario(p,p,'A','a','2026-11-17T00:00:00Z'));
+ source.project.ledger[0].amount+=123;source.baseline.people[0].salary+=456;
+ const expected=structuredClone(source);let working=saveScenario(source.project,source.baseline,'B','b','2026-11-17T01:00:00Z');
+ let opened=restoreScenario(working,'a',source.baseline);assert.equal(opened.project.ledger[0].amount,p.ledger[0].amount);
+ opened=normalizeArchive(JSON.parse(JSON.stringify(opened)),validateProject);
+ assert.equal(reportingProject({archive:opened}).ledger[0].amount,expected.project.ledger[0].amount);
+ const resaved=saveScenario(opened.project,opened.baseline,'C','c','2026-11-17T02:00:00Z');
+ const returned=returnToSource(restoreScenario(resaved,'b',opened.baseline).project);
+ assert.equal(returned.project.ledger[0].amount,expected.project.ledger[0].amount);assert.deepEqual(returned.baseline,expected.baseline);assert.equal(returned.project.savedScenarios.length,3);assert.equal(returned.project.scenarioReturn,undefined);
+ for(const entry of returned.project.savedScenarios)for(const key of ['project','baseline','sourceProject','sourceBaseline'])assert.equal(entry[key].scenarioReturn,undefined);
+ const direct=restoreScenario(expected.project,'a',expected.baseline);assert.deepEqual(returnToSource(direct.project).baseline,expected.baseline);assert.equal(returnToSource(direct.project).project.ledger[0].amount,expected.project.ledger[0].amount);
+});
+test('scenario return contexts reject malformed or nested budgets and support legacy fallback',async()=>{
+ const {saveScenario,returnToSource}=await import('../src/lib/scenarios.js'),{validateProject}=await import('../src/lib/validate-project.js');const p=E.demo(),saved=saveScenario(p,p,'A','a','2026-11-17T00:00:00Z');
+ for(const mutate of [x=>x.scenarioReturn=null,x=>x.scenarioReturn.project.ledger='invalid',x=>x.scenarioReturn.baseline.scenarioReturn={},x=>x.scenarioReturn.project.savedScenarios=[],x=>delete x.activeScenarioId]){const changed=structuredClone(saved);mutate(changed);assert.ok(validateProject(changed).some(x=>x.level==='error'));}
+ const legacy=structuredClone(saved);delete legacy.scenarioReturn;assert.equal(validateProject(legacy).filter(x=>x.level==='error').length,0);assert.equal(returnToSource(legacy).project.ledger[0].amount,p.ledger[0].amount);
+});

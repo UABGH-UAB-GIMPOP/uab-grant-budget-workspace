@@ -1,0 +1,7 @@
+import React from 'react';
+const money=value=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(value);
+export function SupplyCommitmentReview({project,rows}){
+ const linked=rows.filter(row=>row.link?.type==='supply');
+ if(!linked.length)return null;
+ return <section className="invoice-review" aria-label="Supply commitments"><h2>Supply commitments</h2><p>These commitments replace the linked items in the forecast. Quantity and unit-cost changes do not change a linked commitment. Modeled totals above are not additional obligations.</p>{linked.map(row=><details key={row.id}><summary>{project.supplies.find(item=>String(item.id)===String(row.link.id))?.name||'Unknown item'} · {row.name} · {money(row.open)} open</summary><dl className="supply-commitment-facts">{[['Source',row.source],['Authorized',money(row.amount)],['Cancelled',money(row.cancelled)],['Recorded payments',money(row.paid)],['Open balance',money(row.open)],...(row.overpaid?[['Payments above net authorization',money(row.overpaid)]]:[])].map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><p className="muted">Recorded payments follow this budget’s actuals cutoff. Open balance is not proof of payment or a complete forecast schedule.</p>{row.payments.some(payment=>payment.month===null)&&<p role="status">Some open payments fall beyond the project period and are not included in the forecast. Review the commitment schedule in Ledger.</p>}</details>)}</section>;
+}
